@@ -9,4 +9,4 @@
     
 }
 
-UserProfile = ["Age", "Bio", "Name"]
+UserProfile = ["Age", "Bio"]
