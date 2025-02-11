@@ -10,6 +10,7 @@ import UserProfile from './UserProfile'
 
 function App() {
   const [count, setCount] = useState(0)
+  ["name=", "Alice", "age=", "25", "bio=", "Loves hiking and photography"]
 
   return (
     <>
