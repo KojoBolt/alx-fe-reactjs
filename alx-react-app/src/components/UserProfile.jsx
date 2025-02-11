@@ -8,5 +8,4 @@
     );
     
 }
-
-UserProfile = ["Age", "Bio"]
+export default UserProfile;
