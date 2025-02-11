@@ -8,4 +8,5 @@
     );
     
 }
-<UserProfile name="David" age="27" bio="Loves loves coding" />
+
+UserProfile = ["Age", "Bio", "Name"]
