@@ -1,17 +1,10 @@
-import { Contest } from "./UserContext"
 import ProfilePage from './ProfilePage';
 
 
 function App() {
-  return (
-    <>
-    <Contest/>
-    <UserContext.Provider>
-    <ProfilePage />
-    </UserContext.Provider>
-    
-    </>
-  )
+
+  const userData = {name: "Jane", email: "jane.doe@example.com"}
+  return <ProfilePage userData={userData}/>
 }
 
 export default App
