@@ -6,4 +6,4 @@ function UserDetails ({userData}) {
         </div>
     );
 }
-export default UserDetails
+export default UserDetails;
