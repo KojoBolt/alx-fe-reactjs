@@ -1,1 +1,5 @@
-export const Contest = React.createContext()
+import { createContext } from "react"
+
+const Contest = React.createContext()
+
+export default UserContext; 
