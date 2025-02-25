@@ -20,7 +20,7 @@ function Contact () {
     return (
         <div style={{padding: '20px'}}>
             <h1>Contact Us</h1>
-            <form action="">
+            <form onSubmit={handleSubmit}>
                 <input type="text" 
                 name = "name"
                 placeholder = "Enter your name"
