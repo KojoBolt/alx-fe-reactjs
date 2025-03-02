@@ -12,5 +12,7 @@
        <p>{recipe.description}</p>
        {/* Render EditRecipeForm and DeleteRecipeButton here */}
      </div>
-   );s
+   );
  };
+
+ export default RecipeDetails;
