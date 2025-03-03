@@ -1,45 +1,37 @@
-import create from 'zustand'
+import create from 'zustand';
 
+const useRecipeStore = create((set, get) => ({
+  recipes: [
+    { id: 1, title: 'Pasta', description: 'Delicious Italian pasta' },
+    { id: 2, title: 'Pizza', description: 'Homemade pepperoni pizza' }
+  ],
 
-const useRecipeStore = create(set => ({
-  recipes: [ { id: 1, title: 'Pasta', description: 'Delicious Italian pasta' },
-    { id: 2, title: 'Pizza', description: 'Homemade pepperoni pizza' },{ id: 3, title: "Salad", description: "Fresh and healthy salad" },]
+  searchTerm: "",
+  filteredRecipes: [],
 
-    searchTerm: "",
-    filteredRecipes: [],
-    favorites: [],
+  addRecipe: (newRecipe) =>
+    set((state) => ({
+      recipes: [...state.recipes, { ...newRecipe, id: state.recipes.length + 1 }],
+    })),
 
-    addRecipe: (newRecipe) =>
-      set((state) => ({
-        recipes: [...state.recipes, { ...newRecipe, id: state.recipes.length + 1 }],
-      })),
-  
-    updateRecipe: (id, updatedRecipe) =>
-      set((state) => ({
-        recipes: state.recipes.map((recipe) =>
-          recipe.id === id ? { ...recipe, ...updatedRecipe } : recipe
-        ),
-      })),
-  
-   
-    deleteRecipe: (id) =>
-      set((state) => ({
-        recipes: state.recipes.filter((recipe) => recipe.id !== id),
-      })),
+  updateRecipe: (id, updatedRecipe) =>
+    set((state) => ({
+      recipes: state.recipes.map((recipe) =>
+        recipe.id === id ? { ...recipe, ...updatedRecipe } : recipe
+      ),
+    })),
 
-      setSearchTerm: (term) => {
-        set({ searchTerm: term });
-        get().filterRecipes(); 
-      },
+  deleteRecipe: (id) =>
+    set((state) => ({
+      recipes: state.recipes.filter((recipe) => recipe.id !== id),
+    })),
 
-      filterRecipes: () => {
-        const { recipes, searchTerm } = get();
-        const filtered = recipes.filter((recipe) =>
-          recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        set({ filteredRecipes: filtered });
-      },
-    
+  setRecipes: (recipes) => set({ recipes }),
+
+  setSearchTerm: (term) => {
+    set({ searchTerm: term });
+    get().filterRecipes();
+  },
 }));
 
 export default useRecipeStore;
