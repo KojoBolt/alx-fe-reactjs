@@ -8,6 +8,9 @@ const RegistrationForm = () => {
 
 const handleSubmit = (e) => {
   e.preventDefault(); 
+  if (!username || !email || !password) {
+    alert("All fields are required!");
+  }
   console.log({username, email, password});
 }
 // const RegistrationForm = () => {
