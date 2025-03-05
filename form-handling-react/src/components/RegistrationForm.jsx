@@ -7,11 +7,27 @@ const RegistrationForm = () => {
 
 
 const handleSubmit = (e) => {
-  e.preventDefault(); 
-  if (!username || !email || !password) {
-    alert("All fields are required!");
+  e.preventDefault();
+
+  const newErrors = {};
+
+  if (!username) {
+    newErrors.username = "Username is required"
   }
-  console.log({username, email, password});
+
+  if (!email) {
+    newErrors.email = "Email is required"
+  }
+
+  if (!password) {
+    newErrors.password = "Password is reqired"
+  }
+
+  if (Object.keys(newErrors).length > 0) {
+    setErrors(newErrors);
+    return;
+  }
+  console.log("Form submitted", {username, email, password});
 }
 // const RegistrationForm = () => {
 //   const [formData, setFormData] = useState({
