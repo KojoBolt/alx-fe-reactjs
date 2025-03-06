@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
-const formikForm = () => {
+const FormikForm = () => {
   const initialValues = { username: "", email: "", password: "" };
 
   const validationSchema = Yup.object({
@@ -32,4 +32,4 @@ const formikForm = () => {
   );
 }
 
-export default formikForm;
+export default FormikForm;
