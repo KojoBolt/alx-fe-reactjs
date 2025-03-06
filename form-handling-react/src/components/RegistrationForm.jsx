@@ -2,29 +2,34 @@ import { useState } from "react";
 
 const RegistrationForm = () => {
   const [username, setUsername] = useState ('');
-  const [email, setEmail] = useState ('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
+
+    
+
 
 
 const handleSubmit = (e) => {
   e.preventDefault();
+  let validationErrors = {};
 
   const newErrors = {};
 
   if (!username) {
-    newErrors.username = "Username is required"
+    validationErrors.username = "Username is required"
   }
 
   if (!email) {
-    newErrors.email = "Email is required"
+    validationErrors.email = "Email is required"
   }
 
   if (!password) {
-    newErrors.password = "Password is reqired"
+    validationErrors.password = "Password is reqired"
   }
 
-  if (Object.keys(newErrors).length > 0) {
-    setErrors(newErrors);
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
     return;
   }
   console.log("Form submitted", {username, email, password});
