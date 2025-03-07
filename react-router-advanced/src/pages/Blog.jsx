@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const post = [
-    {id: 1, title: "My First Post"}
+    {id: 1, title: "My First Post"},
     {id: 2, title: "My second post"}
-]
+];
 
 function Blog () {
     return (
