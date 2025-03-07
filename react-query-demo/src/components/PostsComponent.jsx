@@ -18,6 +18,8 @@ function PostsComponent () {
     queryKey: ["post"],
     queryFn: fetchPosts, 
     staleTime: 2000,
+    cacheTime: 300000,
+    keepPreviousData: true,
     refetchOnWindowFocus:false,
 });
 
@@ -28,6 +30,7 @@ function PostsComponent () {
         <div>
             <h2>Posts</h2>
             <button onClick={refetch}></button>
+            {isFetching ? "Refreshing..." : "Refetch Posts"}
             <ul>
                 {posts.map((posts) =>
                     <li key={posts.id}>
