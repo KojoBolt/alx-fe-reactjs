@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from "axios";
 
-const fetchPost = async () =>  {
+const fetchPosts = async () =>  {
     const response = await axios.get ('https://jsonplaceholder.typicode.com/posts'); 
     return response.data;
 }
@@ -10,19 +10,19 @@ const fetchPost = async () =>  {
 function PostsComponent () {
   const {
     data: posts,
-    error, 
+    isError, 
     isLoading, 
     refetch,
   } =
   useQuery ({
     queryKey: ["post"],
-    queryFn: fetchPost, 
+    queryFn: fetchPosts, 
     staleTime: 2000,
     refetchOnWindowFocus:false,
 });
 
     if (isLoading) return <p> Posts Loading...</p>
-    if (error) return <p>Post loading error</p>
+    if (isError) return <p>Post loading error</p>
 
     return (
         <div>
