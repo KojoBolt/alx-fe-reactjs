@@ -9,11 +9,15 @@ import BlogPost from "./pages/BlogPost.jsx";
     <AuthProvider>
       <BrowserRouter>
       <Routes>
-      <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/" element={<Profile.jsx/>}/>
-        <ProtectedRoute>
+        <Route
+          path="/profile/*"
+          element={
+            <ProtectedRoute>
               <Profile />
             </ProtectedRoute>
+          }
+        />
         <Route path="/ProfileDetails" element={<ProfileDetails.jsx/>}/>
         <Route path="ProfileSettings" element={<ProfileSettings.jsx/>}/>
         <Route path="/blog" element={<Blog />} />
@@ -26,4 +30,3 @@ import BlogPost from "./pages/BlogPost.jsx";
 }
 
 export default App;
-
