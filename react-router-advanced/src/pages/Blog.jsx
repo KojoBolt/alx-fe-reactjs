@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 const post = [
-    {id: 1, title: "My First Post"},
-    {id: 2, title: "My second post"}
+    {id: 1, BlogPost: "My First Post"},
+    {id: 2, BlogPost: "My second post"}
 ];
 
 function Blog () {
@@ -11,7 +11,7 @@ function Blog () {
             <h1>Blog Post</h1>
             {
                 post.map(post => {
-                    <Link to = {`/blog/${post.id}`}>{post.title}</Link>
+                    <Link to = {`/blog/${post.id}`}>{post.BlogPost}</Link>
                 })
             }
         </div>
