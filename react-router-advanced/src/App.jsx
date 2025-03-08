@@ -9,6 +9,7 @@ import BlogPost from "./pages/BlogPost.jsx";
     <AuthProvider>
       <BrowserRouter>
       <Routes>
+      <Route path="/blog/:id" element={<BlogPost />} />
         <Route path="/" element={<Profile.jsx/>}/>
         <ProtectedRoute>
               <Profile />
