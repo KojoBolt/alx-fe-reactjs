@@ -5,15 +5,20 @@ import ProfileSettings from "./components/ProfileSettings.jsx"
 
  function App() {
   return (
-    <div>
+    <AuthProvider>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Profile.jsx/>}/>
+        <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
         <Route path="/ProfileDetails" element={<ProfileDetails.jsx/>}/>
         <Route path="ProfileSettings" element={<ProfileSettings.jsx/>}/>
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Post />} />
       </Routes>
       </BrowserRouter>
-    </div>
+    </AuthProvider>
   )
 }
 
