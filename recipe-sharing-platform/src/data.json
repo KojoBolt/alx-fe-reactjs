@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Carbonara",
+      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+      "image": "https://leitesculinaria.com/wp-content/uploads/2024/04/spaghetti-carbonara-1200.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Banku and Tilapia",
+      "summary": "Banku with griiled Tilipia.",
+      "image": "https://www.primenewsghana.com/images/2018/may/4/banku-and-Tilapia.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Vegetable Stir Fry",
+      "summary": "A quick and healthy dish loaded with fresh vegetables and a flavorful sauce.",
+      "image": "https://kristineskitchenblog.com/wp-content/uploads/2024/01/vegetable-stir-fry-22-3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Beef Stroganoff",
+      "summary": "Tender beef strips cooked in a creamy mushroom sauce, served over noodles or rice.",
+      "image": "https://www.sipandfeast.com/wp-content/uploads/2023/10/beef-stroganoff-recipe-snippet-3.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Jollof Rice",
+      "summary": "Enjoy a taste of Nigeria Jollof.",
+      "image": "https://i.ytimg.com/vi/jDbUg4f9EFw/maxresdefault.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Mushroom Risotto",
+      "summary": "A creamy Italian rice dish cooked with mushrooms and Parmesan cheese.",
+      "image": "https://www.sandravalvassori.com/wp-content/uploads/2024/02/Risotto-Mushroom-2-352.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Grilled Salmon",
+      "summary": "Fresh salmon fillet grilled to perfection with lemon and herbs.",
+      "image": "https://www.lavenderandmacarons.com/wp-content/uploads/2022/01/vegan-asparagus-mushroom-risotto-recipe.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Pancakes",
+      "summary": "Fluffy pancakes served with syrup, butter, and fresh fruit.",
+      "image": "https://feelgoodfoodie.net/wp-content/uploads/2025/02/Banana-Pancakes-13.jpg"
+    }
+  ]
+  
