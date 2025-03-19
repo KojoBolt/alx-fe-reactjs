@@ -5,21 +5,30 @@ function RecipeDetail() {
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-        try {
-            const response = await fetch('./data.json');
-            if (!response.ok) throw new Error ("Failed to Load Recipe");
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await fetch('/data.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
 
-            const data = await response.json();
-            const selectedRecipe = data.find((r) => r.id.toString() === id);
-            setRecipe(selectedRecipe);
-        } catch (error) {
-            console.error("Error fetching data:", error);
-        }
-    };
-    fetchData();
-  }, [id]);
+                const data = await response.json();
+                const selectedRecipe = data.find((r) => r.id.toString() === id);
+                
+                if (!selectedRecipe) {
+                    throw new Error('Recipe not found');
+                }
+
+                setRecipe(selectedRecipe);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+
+        fetchData();
+    }, [id]);
+
     if (!recipe) {
         return <div className="text-center text-lg font-bold mt-10">Recipe Loading...</div>;
     }
