@@ -39,7 +39,7 @@ function AddRecipeForm() {
             console.log("New Recipe Submitted:", newRecipe);
             alert("Recipe submitted successfully! ");
 
-            // Reset form
+            
             setTitle('');
             setIngredients('');
             setSteps('');
@@ -50,7 +50,7 @@ function AddRecipeForm() {
     return (
         <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
             <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">Add a New Recipe</h2>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4 md: p-2 m-4">
                 
                 <div>
                     <label className="block font-semibold text-gray-700">Recipe Title</label>
