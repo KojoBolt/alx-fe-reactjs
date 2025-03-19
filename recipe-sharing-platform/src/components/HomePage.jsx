@@ -24,7 +24,7 @@ const HomePage = () => {
 
                     <h2 className="text-xl font-semibold mt-4">{recipe.title}</h2>
                     <p className="text-gray-600 mt-2">{recipe.summary}</p>
-                    <a href={`/recipe/${recipe.id}`}>View Recipe</a>
+                    <a href={`/recipe/${recipe.id}`}> <p className="bg-green-800 text-white p-2 rounded min-w-min text-center mt-9">View Recipe</p></a>
                     </div>
                     ))}
                 </div>
