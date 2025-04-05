@@ -1,12 +1,61 @@
-# React + Vite
+# React API Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Getting Started
 
-Currently, two official plugins are available:
+This React application connects to a REST API for data operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Installation
 
-## Expanding the ESLint configuration
+1. Clone the repo:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone [your-repo-url]
+cd [project-folder]
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm start
+```
+
+### Environment Setup
+
+Create a `.env` file:
+
+```
+REACT_APP_API_URL=http:github
+REACT_APP_API_KEY=your_key_here
+```
+
+### Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches test runner
+- `npm run build` - Builds for production
+
+### API Connection
+
+All API calls are managed through `src/api/` service files.
+
+Example usage:
+
+```jsx
+import { getData } from "./api/dataService";
+
+function App() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData()
+      .then((response) => setData(response))
+      .catch((error) => console.error(error));
+  }, []);
+}
+```
