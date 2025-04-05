@@ -44,8 +44,6 @@ REACT_APP_API_KEY=your_key_here
 
 All API calls are managed through `src/api/` service files.
 
-Example usage:
-
 ```jsx
 import { getData } from "./api/dataService";
 
